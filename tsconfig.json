@@ -4,8 +4,10 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "commonjs",
+        "allowSyntheticDefaultImports": true,
         "target": "es6",
+        "module": "es6",
+        "moduleResolution": "node",
         "jsx": "react",
         "paths": {
             "@main/*": ["app/src/ts/main/*"],
