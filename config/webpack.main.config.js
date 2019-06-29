@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: target,
-    filename: '[name].js',
+    filename: 'main/index.js',
     publicPath: '/',
     devtoolModuleFilenameTemplate: 'file:///[absolute-resource-path]'
   },
@@ -19,7 +19,7 @@ module.exports = {
   devtool: isDev && 'source-map',
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts'],
     plugins: [
       new TsConfigPathsPlugin()
     ]
@@ -27,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      { test: /\.tsx?$/, use: ['awesome-typescript-loader'] }
+      { test: /\.ts$/, use: ['awesome-typescript-loader'] }
     ]
   },
   target: 'electron-main',
