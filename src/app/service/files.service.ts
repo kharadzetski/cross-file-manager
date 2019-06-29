@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-const { homedir } = require('os');
-const { readdir } = require('fs');
+import { readdir } from 'fs';
+import { homedir } from 'os';
 
 @Injectable({
   providedIn: 'root'
