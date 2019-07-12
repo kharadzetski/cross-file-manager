@@ -14,4 +14,13 @@ export class FilesComponent implements OnInit {
     this.files = await this.filesService.readUserFiles();
   }
 
+  async onDirValueChange(dir: string) {
+    try {
+      this.files = await this.filesService.readFiles(dir);
+    } catch (e) {
+      console.warn(e);
+    }
+  }
+
+
 }

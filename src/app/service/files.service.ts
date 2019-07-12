@@ -13,4 +13,14 @@ export class FilesService {
     return await new Promise<string[]>((res) => readdir(homedir(), (err, files) => res(files)));
   }
 
+  public async readFiles(dir: string) {
+    return await new Promise<string[]>((res, rej) => readdir(dir, (err, files) => {
+      if (err) {
+        rej(err);
+      } else {
+        res(files);
+      }
+    }));
+  }
+
 }
