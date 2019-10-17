@@ -22,5 +22,4 @@ export class FilesComponent implements OnInit {
     }
   }
 
-
 }
