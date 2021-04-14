@@ -1,15 +1,13 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import debounce from 'lodash-es/debounce';
-import { some } from 'lodash-es';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import debounce from "lodash-es/debounce";
 
 @Component({
-  selector: 'app-text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  selector: "app-text-input",
+  templateUrl: "./text-input.component.html",
+  styleUrls: ["./text-input.component.scss"],
 })
 export class TextInputComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   @Output() value = new EventEmitter<string>();
 
@@ -19,7 +17,5 @@ export class TextInputComponent implements OnInit {
     this.value.emit(text);
   }, 500);
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
